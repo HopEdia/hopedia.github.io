@@ -1,0 +1,22 @@
+{
+  "name": "hopedia_web_site",
+  "version": "0.1.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass sass/style.sass:public/style.css",
+    "watch-css": "sass --watch sass/style.sass:public/style.css"
+  },
+  "author": "koko-ng",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HopEdia/hopedia.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HopEdia/hopedia.github.io/issues"
+  },
+  "homepage": "https://github.com/HopEdia/hopedia.github.io#readme",
+  "description": ""
+}
