@@ -1,0 +1,22 @@
+{
+  "name": "hopedia_web_site",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "koko-ng"
+  ],
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/HopEdia/hopedia.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "text": "requirejs/text#^2.0.15",
+    "requirejs": "^2.2.0"
+  }
+}

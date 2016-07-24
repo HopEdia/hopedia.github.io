@@ -5,8 +5,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass sass/style.sass:public/style.css",
-    "watch-css": "sass --watch sass/style.sass:public/style.css"
+    "build-css": "sass src/sass/:src/css/",
+    "watch-css": "sass --watch src/sass/:src/css/"
   },
   "author": "koko-ng",
   "license": "AGPL-3.0",
