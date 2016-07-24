@@ -9,5 +9,5 @@
 	],
 	allowSourceOverwrites: "true",
 	keepBuildDir: "true",
-	fileExclusionRegExp: /^build\.js$|^sass$/
+	fileExclusionRegExp: /^build\.js$|^sass$|^src/
 })

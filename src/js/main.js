@@ -1,1 +1,60 @@
-function getUrlArgs(){return page=window.location.href.split("?")[1],void 0===page?[void 0]:page.split("/")}function post(e,t,n){var a=new XMLHttpRequest;a.open("POST",apiUrl+t),a.setRequestHeader("Content-Type","application/json;charset=UTF-8"),a.onreadystatechange=function(e){a.readyState===XMLHttpRequest.DONE&&200===a.status&&n(JSON.parse(e.responseText))},a.send(JSON.stringify(e))}function setContent(e){document.getElementById("main-content").innerHTML=e}var apiUrl="http://localhost:8080/",main=document.getElementById("main-content");require.config({paths:{text:"lib/text/text"},baseUrl:"./"}),document.onreadystatechange=function(){switch(args=getUrlArgs(),args.shift()){case void 0:break;case"account":requirejs(["js/account/main"],function(e){e(args)});break;case"beer":}var e=document.getElementById("search");e.addEventListener("keyup",function(t){t.preventDefault(),13===t.keyCode&&post({name:e.value},"beerJSON",function(e){1===e.length&&main.createElement("")})})};
+var apiUrl = 'http://localhost:8080/',
+    main = document.getElementById('main-content')
+
+require.config({
+	paths : {
+		//create alias to plugins (not needed if plugins are on the baseUrl)
+		text: 'lib/text/text',
+	},
+	baseUrl: './'
+});
+
+document.onreadystatechange = function() {
+args = getUrlArgs();
+switch(args.shift()){
+	case undefined:
+		break;
+	case 'account':
+		requirejs(['js/account/main'], function(account) {
+			account(args);
+		});
+		break;
+	case 'beer':
+}
+
+var searchField = document.getElementById('search');
+searchField.addEventListener("keyup", function(event) {
+	event.preventDefault();
+	if (event.keyCode === 13) {
+		post({name:searchField.value}, 'beerJSON', function(res) {
+			if(res.length === 1) {
+				main.createElement('')
+			}
+		});
+	}
+});
+}
+
+//utils
+function getUrlArgs() {
+	page = window.location.href.split('?')[1];
+	if(page === undefined)
+		return [undefined];
+	else
+		return page.split('/');
+}
+function post(criteria, ressource, cb) {
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', apiUrl+ressource)
+	xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+	xhr.onreadystatechange = function (req) {
+		if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+			cb(JSON.parse(req.responseText))
+		}
+	};
+	xhr.send(JSON.stringify(criteria));
+}
+function setContent(html) {
+	document.getElementById('main-content').innerHTML=html;
+}
+

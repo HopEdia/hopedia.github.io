@@ -1,1 +1,22 @@
-define([],function(){return function(e){requirejs(["text!html/account/validation.html"],function(t){setContent(t),document.getElementById("submit").addEventListener("click",function(t){t.preventDefault(),null!=e&&post({email:document.getElementById("email").value,password:document.getElementById("email").value,validationToken:e[0]},"getToken",function(e){console.log(1)})})})}});
+define(function () {
+	//Do setup work here
+
+	return function(paths) {
+		requirejs(['text!html/account/validation.html'], function(html) {
+			setContent(html)
+			document.getElementById('submit').addEventListener("click", function(event) {
+				event.preventDefault();
+				if(paths!=null) {
+					post(
+						{"email": document.getElementById('email').value,
+						"password": document.getElementById('email').value,
+						"validationToken": paths[0]},
+						'getToken',
+						function(res) {
+							console.log(1)
+						});
+				}
+			});
+		});
+	};
+});
