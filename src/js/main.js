@@ -1,4 +1,4 @@
-var apiUrl = 'http://localhost:8080/',
+var apiUrl = 'https://server01-hopedia.rhcloud.com/',
     main = document.getElementById('main-content')
 
 require.config({
