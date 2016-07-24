@@ -9,7 +9,7 @@ define(function () {
 				if(paths!=null) {
 					post(
 						{"email": document.getElementById('email').value,
-						"password": document.getElementById('email').value,
+						"password": document.getElementById('password').value,
 						"validationToken": paths[0]},
 						'getToken',
 						function(res) {
