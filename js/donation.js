@@ -1,0 +1,1 @@
+define([],function(){return function(t){requirejs(["text!html/donation.html"],function(t){setContent(t);var e,n=document.getElementById("flattr");e=document.createElement("iframe"),e.src="//button.flattr.com/view/?fid=g3o9e0&url="+encodeURIComponent(document.URL),e.title="Flattr",e.height=62,e.width=55,e.style.borderWidth=0,n.parentNode.insertBefore(e,n)})}});

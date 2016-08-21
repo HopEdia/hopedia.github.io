@@ -19,6 +19,10 @@ switch(args.shift()){
 			account(args);
 		});
 		break;
+	case 'donation':
+		requirejs(['js/donation'], function(donation) {
+			donation(args)
+		})
 	case 'beer':
 }
 

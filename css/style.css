@@ -35,7 +35,79 @@ main {
   overflow-y: scroll;
   overflow-x: hidden; }
 .centered {
-  margin: auto; }
+  margin: auto;
+  width: 25%; }
+#spinner_table {
+  display: table;
+  height: 100%;
+  width: 100%; }
+#spinner_cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+#spinner_container {
+  position: relative;
+  display: inline-block; }
+#loading_spinner {
+  position: relative;
+  height: 5em;
+  width: auto;
+  z-index: 10; }
+#loading_liquid, #loading_liquid::before {
+  position: absolute;
+  background-color: #ff9617;
+  z-index: 0; }
+#loading_liquid {
+  animation: fill 3s cubic-bezier(0.23, 0.29, 0.33, 1.14) infinite; }
+#loading_liquid::before {
+  position: absolute;
+  border-radius: 100%;
+  top: -0.3em;
+  left: 0;
+  height: 1.2em;
+  width: 1.2em;
+  content: "";
+  opacity: 0;
+  animation: liquid 3s cubic-bezier(0.23, 0.29, 0.33, 1.14) infinite; }
+@keyframes fill {
+  0% {
+    top: 4.65em;
+    left: 1.1em;
+    height: 0em;
+    width: 2.4em; }
+  100% {
+    top: 0.72em;
+    left: 1.1em;
+    height: 3.93em;
+    width: 2.4em; } }
+@keyframes liquid {
+  0% {
+    opacity: 0;
+    height: 0;
+    top: 0; }
+  10% {
+    opacity: 1;
+    top: -0.1em;
+    width: 0.72em; }
+  15% {
+    height: 0.72em; }
+  20% {
+    top: -0.4em;
+    height: 1.2em; }
+  35% {
+    top: -0.2em;
+    width: 1.44em; }
+  50% {
+    width: 0.96em; }
+  60% {
+    top: -0.2em; }
+  65% {
+    top: 0; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    top: 0; } }
 @media all and (orientation: portrait) {
   main {
     width: 100vw;

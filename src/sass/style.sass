@@ -40,7 +40,81 @@ main
 	overflow-x: hidden
 .centered
 	margin: auto
+	width: 25%
 
+$liquid_width: 2.4em
+$animation-timing-function: cubic-bezier(.23,.29,.33,1.14)
+#spinner_table
+	display: table
+	height: 100%
+	width: 100%
+#spinner_cell
+	display: table-cell
+	vertical-align: middle
+	text-align: center
+#spinner_container
+	position: relative
+	display: inline-block
+#loading_spinner
+	position: relative
+	height: 5em
+	width: auto
+	z-index: 10
+#loading_liquid, #loading_liquid::before
+	position: absolute
+	background-color: #ff9617
+	z-index: 0
+#loading_liquid
+	animation: fill 3s $animation-timing-function infinite
+#loading_liquid::before
+	position: absolute
+	border-radius: 100%
+	top: -0.3em
+	left: 0
+	height: 0.5*$liquid_width
+	width: 0.5*$liquid_width
+	content: ""
+	opacity: 0
+	animation: liquid 3s $animation-timing-function infinite
+@keyframes fill
+	0%
+		top: 4.65em
+		left: 1.1em
+		height: 0em
+		width: $liquid_width
+	100%
+		top: 0.72em
+		left: 1.1em
+		height: 3.93em
+		width: $liquid_width
+@keyframes liquid
+	0%
+		opacity: 0
+		height: 0
+		top: 0
+	10%
+		opacity: 1
+		top: -0.1em
+		width: 0.3*$liquid_width
+	15%
+		height: 0.3*$liquid_width
+	20%
+		top: -0.4em
+		height: 0.5*$liquid_width
+	35%
+		top: -0.2em
+		width: 0.6*$liquid_width
+	50%
+		width: 0.4*$liquid_width
+	60%
+		top: -0.2em
+	65%
+		top: 0
+	90%
+		opacity: 1
+	100%
+		opacity: 0
+		top: 0
 
 @media all and (orientation: portrait)
 	main
