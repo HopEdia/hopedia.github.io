@@ -1,0 +1,22 @@
+#info_block {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid #6B731D;
+  font-size: 2em; }
+
+#beer_img {
+  width: 100%;
+  border-bottom: 1px solid #6B731D; }
+
+#beer_img::after {
+  content: "";
+  padding-bottom: 100%;
+  display: block; }
+
+#beer_properties {
+  width: 100%; }
+
+#beer_properties tr td:first-child::after {
+  content: ":"; }
+
+/*# sourceMappingURL=beer.css.map */

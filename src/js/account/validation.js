@@ -10,7 +10,7 @@ define(function () {
 					post(
 						{"email": document.getElementById('email').value,
 						"password": document.getElementById('password').value,
-						"validationToken": paths[0]},
+						"validationToken": paths.join('/')}, //we need get everything, including /
 						'getToken',
 						function(res) {
 							console.log(1)

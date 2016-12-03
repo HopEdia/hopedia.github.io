@@ -14,16 +14,17 @@ var searchField = document.getElementById('search');
 spinner = document.getElementById('spinner_table');
 
 loadPage();
-window.onhashchange = loadPage
+window.onhashchange = loadPage;
 
 searchField.addEventListener("keyup", function(event) {
 	event.preventDefault();
 	if (event.keyCode === 13) {
+		unload()
 		post({name:searchField.value}, 'beerJSON', function(res) {
 			if(res.length === 1) {
+				location.href='#beer/'+res[0]._id;
 				requirejs(['js/beer'], function(beer) {
-					beer(res[0])
-					location.href='#beer/'+res[0]._id
+					beer(res[0]._id)
 				})
 			}
 		});

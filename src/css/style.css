@@ -32,13 +32,16 @@ main {
   width: 100%;
   padding: 0.5rem;
   font-size: 3em;
-  height: 4rem; }
+  height: 4rem;
+  z-index: 2; }
 
 #main-content {
   height: calc(100% - 4em);
   padding: 1em;
   overflow-y: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  z-index: 1;
+  width: 100%; }
 
 .centered {
   margin: auto;
@@ -46,8 +49,12 @@ main {
 
 #spinner_table {
   display: table;
-  height: 100%;
-  width: 100%; }
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  width: 66.66667vw;
+  height: 90vh; }
 
 #spinner_cell {
   display: table-cell;
@@ -73,7 +80,6 @@ main {
   animation: fill 3s cubic-bezier(0.23, 0.29, 0.33, 1.14) infinite; }
 
 #loading_liquid::before {
-  position: absolute;
   border-radius: 100%;
   top: -0.3em;
   left: 0;
