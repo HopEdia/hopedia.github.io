@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "text": "requirejs/text#^2.0.15",
-    "requirejs": "^2.2.0"
+    "requirejs": "^2.2.0",
+    "require-css": "^0.1.10"
   }
 }

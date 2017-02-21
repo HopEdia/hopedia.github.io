@@ -2,3 +2,4 @@ node_modules
 *~
 .sass-cache
 build.txt
+bower_components

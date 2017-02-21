@@ -2,11 +2,16 @@
   "name": "hopedia_web_site",
   "version": "0.1.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-contrib-requirejs": "^1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "sass src/sass/:src/css/",
-    "watch-css": "sass --watch src/sass/:src/css/"
+    "watch-css": "sass --watch src/sass/:src/css/",
+    "build": "grunt"
   },
   "author": "koko-ng",
   "license": "AGPL-3.0",
