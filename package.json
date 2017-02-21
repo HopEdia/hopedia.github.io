@@ -8,7 +8,7 @@
     "grunt-contrib-requirejs": "^1.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "build-css": "sass src/sass/:src/css/",
     "watch-css": "sass --watch src/sass/:src/css/",
     "build": "grunt"
