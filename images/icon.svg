@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48" height="48" width="48" enable-background="new" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <g transform="translate(0 -1004.4)" filter="url(#filter4218)">
+  <circle style="image-rendering:auto" cx="24" cy="1028.4" r="23.997" stroke-width=".1" fill="#cddc39"/>
+  <path d="m31.23 10.074l-17.332 26.356 11.516 11.515a23.997 23.997 0 0 0 0.002 0 23.997 23.997 0 0 0 22.484 -22.039l-16.67-15.832z" fill-rule="evenodd" fill-opacity=".21429" transform="translate(0 1004.4)"/>
+  <g style="">
+   <g style="" transform="matrix(.52719 0 0 .52719 7.0555 1009.7)">
+    <path fill="#c7d7d7" d="m45.5 49.23v-4.802c4.376 0 7.714-2.943 8.558-6.325 0.864-3.461 1.649-8.735 1.098-12.222-0.565-3.566-9.655-1.093-9.655-1.093v-4.805s12.793-2.876 13.689 2.608c0.664 4.07 0.197 11.705-0.775 15.505-1.39 5.428-6.439 11.134-12.915 11.134"/>
+    <path fill="#c7d7d7" d="m45.867 9.034h-33.498v48.771c0 5.426 33.499 5.426 33.499 0v-48.771z"/>
+    <path fill="#fff" d="m14.726 9.0295h28.784v17.57h-28.784z"/>
+    <path fill="#ff9617" d="m43.51 26.605h-28.784v27.432c0 4.403 28.784 4.403 28.784 0v-27.432z"/>
+   </g>
+  </g>
+ </g>
+</svg>

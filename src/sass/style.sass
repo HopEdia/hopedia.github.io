@@ -10,6 +10,8 @@ html
 	font: 100% $font-stack
 	color: $text-color
 	background-color: $bg-color
+	background-image: url("../images/malt_and_hop.svg")
+	background-size: 12vw;
 	height: 1000vh
 	width: 100vw
 	max-width: 100vw
@@ -18,20 +20,21 @@ html
 body
 	margin: 0
 main
-	background-color: #FFF
-	border: 1px solid $dark-color
-	border-radius: 4px
+	background-color: $content-bg
+	border: 1px solid $border-color
 	width: (2/3)*100vw
+	/*max-width: 768px*/
 	height: 90vh
 	margin: 5vh (1/6)*100vw
 #search
 	background-color: $primary-color
+	color: $text-color-inverse
 	border: 0
 	border-bottom: inherit
-	box-shadow: .2px .5px 1px .5px rgba(0, 0, 0, 0.7)
+	box-shadow: 0.1px 0.1px 1px 1px rgba(0, 0, 0, 0.2);
 	width: percentage(1)
-	padding: .5rem
-	font-size: 3em
+	padding-left: 1rem
+	font-size: 2rem
 	height: 4rem
 	z-index: 2
 #main-content

@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "palet.css"
+	"version": 3,
+	"file": "palet.css",
+	"sources": [
+		"../sass/palet.sass"
+	],
+	"names": [],
+	"mappings": ""
 }

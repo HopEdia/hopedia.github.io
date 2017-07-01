@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AAAA,yCAAyC;EACxC,KAAK,EAAE,IAAI",
-"sources": ["../../sass/account/validation.sass"],
-"names": [],
-"file": "validation.css"
+	"version": 3,
+	"file": "validation.css",
+	"sources": [
+		"../../sass/account/validation.sass"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAO,MAAD,CAAC,MAAM,EAAE,AAAO,MAAD,CAAC,KAAK,EAAE,AAAO,MAAD,CAAC,KAAK,CAAC;EACzC,KAAK,EAAE,IAAI,GAAI"
 }

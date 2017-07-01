@@ -5,12 +5,13 @@
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-bower-task": "^0.4.0",
-    "grunt-contrib-requirejs": "^1.0.0"
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-sass": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build-css": "sass src/sass/:src/css/",
-    "watch-css": "sass --watch src/sass/:src/css/",
+    "build-css": "sass src/sass:src/css",
+    "watch-css": "sass --watch src/sass:src/css",
     "build": "grunt"
   },
   "author": "koko-ng",
